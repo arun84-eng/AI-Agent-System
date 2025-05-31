@@ -1,0 +1,43 @@
+          [User Request]
+                |
+                v
+     ┌────────────────────┐
+     │  Frontend (React)  │
+     └────────────────────┘
+                |
+                v
+      Sends API request to
+                |
+                v
+     ┌────────────────────┐
+     │  Backend Server    │ (Node.js in server/index.ts)
+     │  Express API Routes│ (routes.ts)
+     └────────────────────┘
+                |
+        Triggers Agent Flow
+                |
+                v
+     ┌────────────────────┐
+     │  AI System Handler │ (ai_system.py)
+     └────────────────────┘
+                |
+     Executes/Coordinates Agents
+                |
+                v
+┌────────────────┬────────────────┬────────────────┐
+│   Agent A       │   Agent B      │   Agent C      │
+│ (e.g., Planner) │ (e.g., Coder)  │ (e.g., Tester) │
+└────────────────┴────────────────┴────────────────┘
+                |
+     Agent outputs are passed or chained
+                v
+     ┌────────────────────────────┐
+     │   Aggregator/Final Output  │
+     └────────────────────────────┘
+                |
+       Response sent back to client
+                |
+                v
+     ┌────────────────────┐
+     │ Frontend Displays   │
+     └────────────────────┘
